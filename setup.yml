@@ -1,0 +1,10 @@
+- name: "Set up roboshop Application"
+  hosts: all
+  become: yes
+  tasks:
+    - name: Set up cart
+      import_role:
+        name: cart
+      tags:
+        - cart
+
